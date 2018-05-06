@@ -1,6 +1,6 @@
-title:            凌风博客
-description:      不爱旅行的程序员不是好的摄影师。
-disqus_shortname: lingfeng                            # disqus_comments
+title:            MrAxu
+description:      get busy living,or get busy dying.
+disqus_shortname: xuguojing                            # disqus_comments
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
@@ -16,19 +16,19 @@ post_img:
 
 # Owner/author information
 owner:
-  name:           凌风
+  name:           mraxu
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          yellow.716@163.com
+  bio:            "Your bio Ygoes here. It shouldn't be super long but a good sentence or two should suffice."
+  email:          gj-x@qq.com
   # Social networking links used in footer. Update and remove as you like.
-  weibo:          http://weibo.com/549130180
-  wechat:
+  weibo:          http://weibo.com
+  wechat:         vvvvvvgj
   douban:
   zhihu:
-  stackoverflow:  https://stackoverflow.com/users/6219137/凌-风
-  twitter:        https://twitter.com/lingfeng_716
+  stackoverflow:  https://stackoverflow.com/users/9692767/axu
+  twitter:        https://twitter.com/HeartNoBNumber
   facebook:
-  github:         https://github.com/q549130180
+  github:         https://github.com/
   stackexchange:
   linkedin:
   instagram:
@@ -39,8 +39,8 @@ owner:
 
 # SEO
 seo:
-  title:  IT博客,Java技术博客,Java,JavaWeb,Redis,Linux,JavaScript,Hadoop
-  description: Java技术博客,核心IT技术包括：Java,JavaWeb,Redis,Linux,JavaScript等方向的技术文章
+  title:  IT博客,Linux,Centos,RetHat,RAID
+  description: 服务器技术博客,核心IT技术包括：Linux,Windows Server,RAID
 
 # Background image to be tiled on all pages
 background:
@@ -48,7 +48,7 @@ background:
 background_color: F7F7F7
 
 # Analytics and webmaster tools stuff goes here
-google_analytics: UA-78482070-1
+google_analytics: UA-110582355-1
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
