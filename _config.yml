@@ -47,6 +47,11 @@ background:
 
 background_color: F7F7F7
 
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: 61e6a4d794b0d024d935a5266c22ef04
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-110582355-1
 google_verify:
