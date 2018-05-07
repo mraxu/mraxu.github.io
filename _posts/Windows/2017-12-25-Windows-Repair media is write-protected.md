@@ -2,10 +2,10 @@
 layout: post
 title:  修复介质被写保护
 description: "利用软件进行介质修复"
-modified: 2017-09-04 13:20:20
+modified: 2017-12-25 13:20:20
 tags: [Windows,Diskmgmt]
 post_type: developer
-blogid: 201709040001
+blogid: 201712250001
 categories: [Windows]
 image:
   feature: posts_header/abstract-7.jpg
