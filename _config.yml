@@ -5,9 +5,9 @@ reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:              #http://huangxubo.me/blog
+#url:              #http://huangxubo.me/blog
 
-home_url:         https://axu666.win
+#home_url:         https://axu666.win
 
 post_img:
   feature: abstract-1.jpg
