@@ -61,6 +61,8 @@ timezone:    America/New_York
 future:      true
 highlighter: rouge
 markdown:    kramdown
+kramdown:
+  input: GFM  
 # Markdown解析插件rdiscount,kramdown,redcarpet
 
 # redcarpet:
