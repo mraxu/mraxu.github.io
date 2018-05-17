@@ -123,3 +123,12 @@ include: [".htaccess"]
 exclude: ["note","Timeline","lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE.md", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
 # 文章分类
 # category: developer,life
+
+# 搜索
+syntax_highlighter_opts:
+    wrap:              div
+    line_numbers:      inline
+    line_number_start: 1
+    tab_width:         4
+    bold_every:        10
+    css:               style
