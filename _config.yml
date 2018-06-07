@@ -57,12 +57,12 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    timezone: Asia/Shanghai
+#timezone:    timezone: Asia/Shanghai
 future:      true
 highlighter: rouge
 markdown:    kramdown
 kramdown:
-  input: GFM  
+  input: GFM
 # Markdown解析插件rdiscount,kramdown,redcarpet
 
 # redcarpet:
