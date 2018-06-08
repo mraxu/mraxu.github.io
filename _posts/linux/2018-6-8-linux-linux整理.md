@@ -73,11 +73,9 @@ image:
     - `..`表示当前目录的上一级目录
     - 两个临近目录直接进行切换,命令:`cd -`
 - 实例
-```
-xuguojing@xuguojinglinux:~$
-#1.第一个xuguojing:当前登录的用户
-#2.@:英文at的意思,表示在
-#3.第二个xuguojinglinux:表示主机名「hostname」
-#4.~:当前工作目录的位置:宿主目录
-#5.$:表示当前登录的用户为普通用户,如果是`#`则为超级用户
-```
+**xuguojing@xuguojinglinux:~$**
+- 1.第一个xuguojing:当前登录的用户
+- 2.@:英文at的意思,表示在
+- 3.第二个xuguojinglinux:表示主机名「hostname」
+- 4.~:当前工作目录的位置:宿主目录
+- 5.$:表示当前登录的用户为普通用户,如果是`#`则为超级用户
