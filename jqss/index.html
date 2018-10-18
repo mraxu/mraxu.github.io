@@ -1,254 +1,684 @@
-<!doctype html>
 <html>
-<head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>目录</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; padding-bottom: 70px; overflow-x: visible; }
-.first-line-indent #write div, .first-line-indent #write li, .first-line-indent #write p { text-indent: 2em; }
-.first-line-indent #write div :not(p):not(div), .first-line-indent #write div.md-htmlblock-container, .first-line-indent #write p *, .first-line-indent pre { text-indent: 0px; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
-#write li > figure:first-child { margin-top: -20px; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 80px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
-  #write { margin-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  @page { margin: 20mm 0px; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > img:only-child { display: block; margin: auto; }
-p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:jcss</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
 
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
 
-:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
-@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
-html { font-size: 16px; }
-body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
-#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
-#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
-body > :first-child { margin-top: 0px !important; }
-body > :last-child { margin-bottom: 0px !important; }
-a { color: rgb(65, 131, 196); }
-h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
-h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
-h1 tt, h1 code { font-size: inherit; }
-h2 tt, h2 code { font-size: inherit; }
-h3 tt, h3 code { font-size: inherit; }
-h4 tt, h4 code { font-size: inherit; }
-h5 tt, h5 code { font-size: inherit; }
-h6 tt, h6 code { font-size: inherit; }
-h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
-h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
-h3 { font-size: 1.5em; line-height: 1.43; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1em; }
-h6 { font-size: 1em; color: rgb(119, 119, 119); }
-p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
-li > ol, li > ul { margin: 0px; }
-hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
-body > h2:first-child { margin-top: 0px; padding-top: 0px; }
-body > h1:first-child { margin-top: 0px; padding-top: 0px; }
-body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
-body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
-h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
-li p.first { display: inline-block; }
-ul, ol { padding-left: 30px; }
-ul:first-child, ol:first-child { margin-top: 0px; }
-ul:last-child, ol:last-child { margin-bottom: 0px; }
-blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
-blockquote blockquote { padding-right: 0px; }
-table { padding: 0px; word-break: initial; }
-table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
-table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
-table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
-table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
-table tr th:first-child, table tr td:first-child { margin-top: 0px; }
-table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
-.CodeMirror-lines { padding-left: 4px; }
-.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
-.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
-code { background-color: rgb(243, 244, 244); padding: 0px 4px 2px; }
-.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
-.md-task-list-item > input { margin-left: -1.3em; }
-@media screen and (min-width: 914px) {
-}
-@media print {
-  html { font-size: 13px; }
-  table, pre { break-inside: avoid; }
-  pre { word-wrap: break-word; }
-}
-.md-fences { background-color: rgb(248, 248, 248); }
-#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
-.mathjax-block > .code-tooltip { bottom: 0.375rem; }
-.md-mathjax-midline { background: rgb(250, 250, 250); }
-#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
-#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
-.md-tag { color: rgb(167, 167, 167); opacity: 1; }
-.md-toc { margin-top: 20px; padding-bottom: 20px; }
-.sidebar-tabs { border-bottom: none; }
-#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
-#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
-.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
-header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
-.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
-.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
-.md-lang { color: rgb(180, 101, 77); }
-.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
 
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
 
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
 
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
 
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="-">目录:</h1>
+<p>[TOC]</p>
+<h1 id="-20181010-20181016">供配电基础知识(讲师:张浩楠) 日期:20181010~20181016</h1>
+<h2 id="1-">1.   术语 &amp; 单位</h2>
+<h3 id="1-0-">1.0   电流</h3>
+<h4 id="1-0-0-"><strong>1.0.0   定义</strong></h4>
+<ul>
+<li>电荷的<strong>定向运动</strong>叫做<strong><em>电流</em></strong>,金属导体中的自由电子在电厂力的作用下的<strong>定向运动</strong>,电解液中的<strong>正、负离子</strong>在电场力作用下向着<strong>相反方向</strong>的运动等都叫做<strong><em>电流</em></strong><h4 id="1-0-1-"><strong>1.0.1   公式</strong></h4>
+</li>
+<li><strong>I = q/t</strong></li>
+<li><strong>公式解释</strong><ul>
+<li>I = 电流,单位为<strong>安培</strong>,符号为 A</li>
+<li>q = 通过导体横截面的电荷量,单位为<strong>库伦</strong>,符号为 C</li>
+<li>t = 通过电荷量 q 所用的时间,单位为<strong>秒</strong>,符号为 S</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-1-">1.1   电流三要素</h3>
+<h4 id="1-1-0-">1.1.0  频率</h4>
+<ul>
+<li>相关图析：<img src="https://vgy.me/Do6znh.png" alt=""></li>
+<li>定义：<ul>
+<li>单位时间内完成周期性变化的次数，是描述周期运动频率程度的量~</li>
+</ul>
+</li>
+<li>常用单位：Hz  <ul>
+<li>公用频率为<strong>50Hz</strong><ul>
+<li>1 秒之内曲线内往返 50 次</li>
+<li>相当于<strong>人类折返跑</strong> 50 次</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>表示符号为：fv</li>
+</ul>
+<h4 id="1-1-1-">1.1.1   幅值</h4>
+<ul>
+<li>相关图析：<img src="https://vgy.me/Do6znh.png" alt=""> </li>
+<li>电压范围<ul>
+<li>一般电压范围为 220V / 380V</li>
+</ul>
+</li>
+<li>振幅<ul>
+<li>定义<ul>
+<li>正弦量<strong>正的最大值</strong></li>
+</ul>
+</li>
+<li>表示符号<ul>
+<li>Um &amp; Im 「大写字母加小写下标m」</li>
+<li>相关图析:<img src="https://vgy.me/mm22Im.png" alt=""></li>
+</ul>
+</li>
+<li>有效值<ul>
+<li>定义<ul>
+<li>在工程应用中常用<strong><em>不变的量**</em></strong>有效值<strong>来表示</strong>正弦量幅值**的大小</li>
+<li>常用交流电表<strong>指示</strong>的<strong>电压、电流读数</strong>，那就是<strong>有效值</strong></li>
+<li>交流设备名牌标注的<strong>电压</strong>、<strong>电流</strong>均为<strong>有效值</strong></li>
+<li><strong>标准电压 220V</strong>也是指供电电压的<strong>有效值</strong></li>
+</ul>
+</li>
+<li>有效值的确定<ul>
+<li>将直流电流 <strong>I</strong> 和交流电流 <strong>i</strong> 通过阻值 <strong>R</strong> 的电阻在相同 <strong>T</strong> 的时间内,消耗相同的能量 <strong>Q</strong>，则称为 <strong>I</strong> 为 <strong>i</strong> 的<strong>有效值</strong></li>
+<li>也就是说：<strong>与交流热效应相等的直流定义为交流电的有效值</strong><h4 id="1-1-2-"><strong>1.1.2   相位</strong></h4>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>相关图析：<img src="https://vgy.me/Do6znh.png" alt=""> <ul>
+<li>单位：φ</li>
+<li>公式:<img src="https://vgy.me/HCyV5e.png" alt=""><ul>
+<li>图中为 正弦量中的相位角</li>
+</ul>
+</li>
+<li>初相位<ul>
+<li>​φ t = 0 时的相位,称为初相位或初相角</li>
+<li>图析<ul>
+<li><img src="https://vgy.me/sS5UsU.png" alt=""></li>
+</ul>
+</li>
+<li>​(零点)计时起点<ul>
+<li>​离原点最近波形从 0 变 + 与横轴的交点</li>
+<li>​计时起点在原点<strong>左侧,则 &gt; 0 φ</strong></li>
+<li>​计时起点在原点的<strong>右侧,则 &lt; 0 φ</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-">1.2   交流电</h3>
+<h4 id="1-2-0-">1.2.0 定义</h4>
+<ul>
+<li>电流或电压方向随时间做周期性变化,在一个周期内的运行平均值为零<h4 id="1-2-1-">1.2.1 类比</h4>
+</li>
+<li>一定会符合上面电流 3 要素的一致性</li>
+<li>就类似人类一起搬重物时，用的 1 2 3 口号那样<h3 id="1-3-">1.3  直流电</h3>
+<h4 id="1-3-0-">1.3.0  含义</h4>
+</li>
+<li>方向不随时间变化的电压或电流<h3 id="1-4-">1.4 恒流电</h3>
+<h4 id="1-4-0-">1.4.0 含义</h4>
+</li>
+<li>​是特殊的直流电,大小和方向均不变的直流电<h3 id="1-5-">1.5 负载电流</h3>
+<h4 id="1-5-0-">1.5.0  容性负载电流</h4>
+</li>
+<li><strong>它会超前于电压</strong><h4 id="1-5-1-">1.5.1  感性负载电流</h4>
+</li>
+<li><strong>它会滞后于电压</strong><h4 id="1-5-2-">1.5.2  注意点</h4>
+</li>
+<li><strong>滞后和超前指的都是相位，不是时间</strong><h3 id="1-6-">1.6 特殊波形</h3>
+<h4 id="1-6-0-">1.6.0 方波</h4>
+</li>
+<li>图析
+<img src="https://vgy.me/avvkAl.png" alt=""><h3 id="1-7-">1.7 电压</h3>
+<h4 id="1-7-0-">1.7.0 前提</h4>
+<h5 id="1-7-0-1-">1.7.0.1 电源和电动势</h5>
+</li>
+<li>当电源内部,当局外力不断地把正电荷从地电位移到高电位的过程中,局外力要反抗电场力做功,这个做功过程就是电源将其他形式的能量转换成电能的过程。</li>
+<li>为衡量不同电源转换能量的本领，引入电动势「简称电势」这个物理量</li>
+<li>​定义<ul>
+<li>在电源内部，局外力把正电荷从低电位「负极板」移到高电位，局外力所做的功「电源增加的的电能」 <h4 id="1-7-1-">1.7.1 公式</h4>
+</li>
+</ul>
+</li>
+<li><strong>E = w/q</strong></li>
+<li>公式解析<ul>
+<li>E : 电源电动势,单位是伏特,符号为 V</li>
+<li>w : 电源力移动正电荷做的功,单位是焦耳,符号为 J</li>
+<li>q : 电源力移动的电荷量,单位是库仑,符号为 C<h3 id="1-8-">1.8 电压和电流的产物</h3>
+<h4 id="1-8-0-">1.8.0 电功</h4>
+<h3 id="1-9-">1.9 电功的延伸:电功率</h3>
+<h4 id="1-9-0-">1.9.0 定义</h4>
+</li>
+</ul>
+</li>
+<li><strong>单位时间内电能所做的功叫「电功率」</strong><h4 id="1-9-1-">1.9.1 公式</h4>
+</li>
+<li><strong>P = W/t = UIt/t = UI</strong></li>
+<li><strong> P = UI = IRI = I2R</strong></li>
+<li><strong> P = U2/R</strong></li>
+<li>公式解释<ul>
+<li>U : 加压于用电设备两端电压「单位为伏特」</li>
+<li>I : 通过用电设备的电流「单位为安培」</li>
+<li>t : ​用电设备耗电的时间「单位为秒」</li>
+<li>W : ​用功单位 「瓦特·秒」<h3 id="1-10-">1.10 电容</h3>
+<h4 id="1-10-0-">1.10.0 解析</h4>
+</li>
+</ul>
+</li>
+<li><strong>​电容不做功 只储能</strong><h3 id="1-11-">1.11 功率</h3>
+<h4 id="1-11-0-p">1.11.0 有功功率 P</h4>
+</li>
+<li><strong>定义</strong><ul>
+<li>交流电路中，凡是消耗在电阻原件上，功率不可逆转换的那部分功率「转换热能、光能、机械能」称为有功功率</li>
+</ul>
+</li>
+<li><strong>单位</strong><ul>
+<li>瓦「W」</li>
+<li>千瓦「kW」<h4 id="1-11-1-q">1.11.1 无功功率 Q</h4>
+</li>
+</ul>
+</li>
+<li><strong>定义</strong><ul>
+<li>​将电感或电容原件与交流电源往复交换的功率称之为无功功率，用 Q 表示</li>
+</ul>
+</li>
+<li><strong>单位</strong><ul>
+<li>乏「Var」</li>
+<li>千乏「kVar」<h4 id="1-11-2-s">1.11.2 视在功率 S</h4>
+</li>
+</ul>
+</li>
+<li><strong>定义</strong><ul>
+<li>交流电源提供的总功率，在数值上是交流电路中电压与电流的乘积，用 S 表示</li>
+</ul>
+</li>
+<li><strong>单位</strong><ul>
+<li>伏安「VA」</li>
+<li>千伏安「kVA」<h4 id="1-11-3-">1.11.3 注意点</h4>
+</li>
+</ul>
+</li>
+<li><strong>公式 Sn = UnIn</strong><ul>
+<li>称为发电机、变压器等供电设施设备的容量，可用来衡量发电机、变压器可能提供的最大有功功率</li>
+<li>图析<img src="https://vgy.me/YxYvIL.png" alt=""><h4 id="1-11-4-">1.11.4 ​提高功率因数的意义</h4>
+</li>
+</ul>
+</li>
+<li>充分利用电源设备的容量</li>
+<li>减少线路和发电机绕组的功率损耗<h4 id="1-11-5-">1.11.5 ​需要记住的公式</h4>
+<img src="https://vgy.me/hq2KlR.png" alt=""><h4 id="1-11-6-">1.11.6 ​功率因数</h4>
+</li>
+<li>不可能超过 1 <h3 id="1-12-">1.12 矢量</h3>
+<h4 id="-">含义</h4>
+</li>
+<li>​带有大小和方向的量<h3 id="1-13-">1.13 ​短路</h3>
+</li>
+<li>​电流无穷大</li>
+<li>电压变为 0<h3 id="1-14-">1.14 接地</h3>
+<h4 id="1-14-0-">1.14.0解析</h4>
+</li>
+<li>电会从电阻比较小的地方流走</li>
+<li>比方说<ul>
+<li>人体大概有 1500 欧「打比方的」</li>
+<li>​接地大概有 4 欧</li>
+<li>如果有<strong>接地</strong>的话,电流会先试试<strong>人身体上的电阻</strong>,所以人体<strong>会被电到一下</strong>,也就是<strong>电试试能不能通行</strong>,结果<strong>电觉得电阻大</strong>,无法通行,然后再窜到接地,觉得电阻真小,然后才从接地 4 欧那里,溜出去<h3 id="1-15-">1.15 电弧</h3>
+<h4 id="1-15-0-">1.15.0 解析</h4>
+</li>
+</ul>
+</li>
+<li>​带电的导线</li>
+<li>它会随着空气一起飘走<h3 id="1-16-">1.16 ​一些放电现象</h3>
+<h4 id="1-16-0-">1.16.0 击穿</h4>
+</li>
+<li>解析<ul>
+<li>​沿绝缘体内部放电</li>
+</ul>
+</li>
+<li>击穿条件:<ul>
+<li>一定​需要标准空气,标准空气条件如下</li>
+<li>25 摄氏度,50% 湿度,1 个<a href="http://baike.baidu.com/link?url=Q8PPLyXXPWQwANrG8JcFsEDB8us5W2-VRSGDGAVEPRcExb2uKdDbgPtaxnX5Z43KRaXSsKF7IF0Im6RN5Yq_Jq5bP3AN_EfEYP6eZv0Q4yz29X7xRE2dYtUgQ7ewyA17dmjNM2UumIfpx6QFNbN10K">大气压</a></li>
+</ul>
+</li>
+<li>电压击穿空气<ul>
+<li>每 30kV 电压击穿1cm 空气</li>
+<li>当电压升高时，每 cm 击穿电压下降
+如 2250kV 可击穿 150cm 标准天气<h4 id="-1-16-1-">​1.16.1 沿面放电</h4>
+</li>
+</ul>
+</li>
+<li>解析<ul>
+<li>沿绝缘体和空气分界面上发生的放电现象<h4 id="1-16-2-">1.16.2 ​闪络</h4>
+</li>
+</ul>
+</li>
+<li>解析<ul>
+<li>沿面放电发展到贯穿性空气击穿，称为「闪络」</li>
+<li>​沿面闪络电压比气体或固体单独存在时的击穿电压低<h4 id="1-16-3-">1.16.3 以上放电现象相关图片</h4>
+<img src="https://vgy.me/yZ0hOD.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="2-">2.   常见符号</h2>
+<h3 id="2-0-">2.0 基本符号「依据灭弧能力从高到低排行」</h3>
+<h4 id="2-0-0-">2.0.0 隔离开关(刀开关)</h4>
+<ul>
+<li>相关图片
+<img src="https://vgy.me/3jXqVt.png" alt=""></li>
+<li>注意点<ul>
+<li>不能带载操作<h4 id="2-0-1-">2.0.1 负荷开关</h4>
+</li>
+</ul>
+</li>
+<li>相关图片(图片所示类圆形为「半球形」)
+<img src="https://vgy.me/WcIT1l.png" alt=""></li>
+<li>注意点<ul>
+<li>可带正常负载操作 <h4 id="2-0-2-">2.0.2 断路器</h4>
+</li>
+</ul>
+</li>
+<li>相关图片
+<img src="https://vgy.me/jYSTpo.png" alt=""></li>
+<li>具有过流、短路保护功能</li>
+<li>往上推是「合闸」<ul>
+<li>「合闸」就是把电闸合上的意思， &quot;合闸送电&quot;的&quot;合闸&quot;就是将需要送电线路的开关进行操作,使负荷开关闭合的意思</li>
+</ul>
+</li>
+<li>​往下推是 分闸<ul>
+<li>分闸,应用于电力系统,是指断路器由合闸位置转为断开位置<h4 id="2-0-3-">2.0.3 ​熔断器</h4>
+</li>
+</ul>
+</li>
+<li>相关图片
+<img src="https://vgy.me/CLC760.png" alt=""></li>
+<li>类似于「保险丝」,如果短路，那就会被直接烧断了</li>
+</ul>
+<h3 id="2-1-">2.1 电路图相关符号</h3>
+<p><img src="https://vgy.me/LY7jsn.png" alt="">
+<img src="https://vgy.me/oUpI0p.png" alt="">
+<img src="https://vgy.me/wclUZL.png" alt="">
+<img src="https://vgy.me/YYKDDt.png" alt=""></p>
+<h3 id="2-2-">2.2 互锁开关</h3>
+<h4 id="2-2-0-">2.2.0 电气互锁</h4>
+<ul>
+<li>定义<ul>
+<li>电气控制中互锁主要是为保证电器安全运行而设置的</li>
+<li>它主要是由两电器元件互相控制而形成互锁的</li>
+</ul>
+</li>
+<li>​实质:<ul>
+<li>电器互锁就是,将这两个继电器的常闭触电接入另一个继电器的线圈控制回路里.这样,一个继电器得电动作,另一个继电器线圈上就不可能形成闭合回路。但也可以用机械联杆实现这一动作。</li>
+</ul>
+</li>
+<li>实例：<ul>
+<li>如下图，其中 KM1 与 KM2 为电器互锁，当 SB1 按下的同时按下 SB2 ，SB2 将不起作用，这样防止主电路短路
+<img src="https://vgy.me/spW6zC.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-">3.   数据中心基础设施</h2>
+<h3 id="3-0-">3.0 基础设施的全生命周期</h3>
+<p><strong>设计--&gt;施工--&gt;测试--&gt;验收支付--&gt;运行</strong></p>
+<h3 id="3-1-">3.1 数据中心供配电系统的组成</h3>
+<h4 id="3-1-0-">3.1.0 高压配电系统</h4>
+<h4 id="3-1-0-1-">3.1.0.1  主要高压电器种类</h4>
+<ul>
+<li>开关电器：如断路器、隔离开关、负荷开关、接地开关等；</li>
+<li>保护电器：如熔断器、避雷器；</li>
+<li>测量电器：如电压互感器、电流互感器；<ul>
+<li>​电流互感器:二次侧不允许开路</li>
+<li>电压互感器: ​二次侧不允许短路</li>
+</ul>
+</li>
+<li>限流电器：如电抗器、电阻器；</li>
+<li>成套电器与组合电器；</li>
+<li>其他：如电力电容器。<h4 id="3-1-0-2-">3.1.0.2高压配电一次设备</h4>
+</li>
+<li>​高压开关柜<ul>
+<li>「又叫成套开关或成套配电装置」</li>
+<li>相关图片
+<img src="https://vgy.me/cgOkks.png" alt="">
+<img src="https://vgy.me/TMcVTE.png" alt=""></li>
+<li>高压开关柜五防<ul>
+<li>防止带电荷合闸</li>
+<li>防止带接地线合闸</li>
+<li>​防止误入带电间隔</li>
+<li>防止带电挂接地线</li>
+<li>防止带负荷拉隔离柜「或者隔离刀闸」</li>
+</ul>
+</li>
+<li>它是以断路器为主的电器设备</li>
+<li>高压开关柜型号<ul>
+<li>KYN-28A<ul>
+<li>K 表示 铠装 </li>
+<li>Y 表示 可移动</li>
+<li>N 表示 户内</li>
+<li>中文全名:户内金属铠装移开式开关设备</li>
+<li>额定电压 3.6kV~12kV</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>占地少</li>
+<li>安装、使用方便</li>
+<li>适用于大量生产</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>​高压断路器<ul>
+<li>​LN2-10/1600型高压断路器<ul>
+<li>是指额定高压为 <strong>10kV ，额定电流为 1600A</strong>，额定短路开断电流为 31.5kA 的户内型六氟化硫断路器</li>
+<li>名词解释<ul>
+<li>L：六氟化硫断路器</li>
+<li>N：户内型</li>
+<li>2：设计序号</li>
+<li>10：额定电压</li>
+<li>1600：额定电流，单位为 A</li>
+<li>31.5：额定短路开断电流,单位为 kA</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GW6-35W/1000型隔离开关<ul>
+<li>是指户外型,额定电压为 35kV，额定电流为 1000A，适用于污秽地区的高压隔离开关</li>
+<li>名词解释：<ul>
+<li>G:高压隔离开关</li>
+<li>W:户外型</li>
+<li>6:设计序号</li>
+<li>35:额定电压 kV</li>
+<li>W:防污型</li>
+<li>1000A:额定电流 A</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>高压电缆</li>
+</ul>
+</li>
+<li>含义:<ul>
+<li>高压电缆是<strong>电力电缆</strong>的一种，是用于传输<strong><em>10kv-35kv</em></strong>之间的电力电缆，多应用于传输的主干道，高压电缆的产品执行标准是<strong>gb/t</strong>。特高压电缆是随着电缆技术的不断发展而出现的一种电力电缆，特高压电缆一般作为大型的输电枢纽，属于技术含量较高的一种高压电缆，主要用于较远距离的传输。</li>
+<li>互感器<h4 id="3-1-0-4-">3.1.0.4  与一次设备相关的二次设备</h4>
+</li>
+<li>继电保护装置</li>
+<li>测量装置</li>
+<li>操控电路<h4 id="3-1-0-5-">3.1.0.5  高压交流供电系统</h4>
+</li>
+<li>发电厂</li>
+<li>电力线路</li>
+<li>变电站</li>
+<li>电力用户</li>
+<li>图析</li>
+</ul>
+</li>
+<li><img src="https://vgy.me/XnCv5w.png" alt=""></li>
+<li>​经历<strong>生产、输送、变换、分配</strong>四个环节<h3 id="3-1-1-">3.1.1 低压配电系统</h3>
+<h4 id="3-1-1-0-">3.1.1.0  讲师所说的解释</h4>
+<ul>
+<li>一个节点不用安装那么多的「断路器」</li>
+<li>接触不良的区域电阻会放大，电阻放大会发热</li>
+<li>有变压器的地方都是从高压那边连接过来的,所以叫「市电进线」<h4 id="3-1-1-1-">3.1.1.1 常用低压开关「相关图片在上面电路符号」</h4>
+</li>
+<li>​隔离开关</li>
+</ul>
+</li>
+<li>千万<strong>不能带载操作</strong><ul>
+<li>​负荷开关</li>
+</ul>
+</li>
+<li>有基本灭弧装置，能切断正常电流<ul>
+<li>​断路器</li>
+</ul>
+</li>
+<li>作用是<strong>​过流保护。短路保护</strong><ul>
+<li>相关型号<ul>
+<li>​<a href="https://www.zjtcn.com/zhishi/acbkqdlq/">ACB 空气断路器</a></li>
+<li><a href="http://baike.baidu.com/link?url=jbdnJpXd8dW5-PRqK7mEfza6wnrUQAy3wFNFDdagSzn-Da671GK801m94yUQgY34dV4uKUJW4tD_CIArJJzNW088qx3EH1jU9BlJkwIRNzuYdULEtPigMslfYzhRMd4DmichQWXtpG7HjGqgwW9gTYSjo9vpGXUCF2lJDNbekqW4qD2PXMidZcHCsmJ3kZx9">MCCB 塑壳断路器</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%B0%8F%E5%9E%8B%E6%96%AD%E8%B7%AF%E5%99%A8/9860635">​MCB 小型断路器</a></li>
+<li><a href="http://www.baike.com/wiki/%E6%A1%86%E6%9E%B6%E5%BC%8F%E6%96%AD%E8%B7%AF%E5%99%A8">​框架断路器</a></li>
+</ul>
+</li>
+<li>​熔断器</li>
+</ul>
+</li>
+<li>作用:<strong>严重过流保护、短路保护</strong><h3 id="3-2-">3.2  ​高低压配电基本模式</h3>
+<ul>
+<li>下面图片中的一些解释</li>
+</ul>
+</li>
+<li>MV = 10kV</li>
+<li>LV = 380V</li>
+<li>MLVS = 低压主开关盘<h4 id="3-2-0-">3.2.0  ​单回路线</h4>
+<img src="https://vgy.me/Hx7EUj.png" alt=""><h4 id="3-2-1-">3.2.1  ​环形干线</h4>
+<img src="https://vgy.me/Sd5qAE.png" alt=""><h4 id="3-2-2-">3.2.2  ​双回路供电</h4>
+<img src="https://vgy.me/z2u5nZ.png" alt=""><h4 id="3-2-3-">3.2.3  双母线双回路供电「现在常用」</h4>
+<img src="https://vgy.me/T356Ga.png" alt=""><h3 id="3-3-">3.3  ​应急电源系统</h3>
+<h4 id="-3-3-0-">​3.3.0  应急柴油发电机</h4>
+<h4 id="-3-3-1-">​3.3.1  蓄电池组</h4>
+<h3 id="3-4-">3.4  ​不间断电源系统</h3>
+<h4 id="-3-4-0-">​3.4.0  蓄电池组</h4>
+<h4 id="3-4-1-ups-">3.4.1  ​UPS 主体设备</h4>
+<h3 id="3-5-">3.5  ​照明及应急照明系统</h3>
+<h4 id="3-5-0-">3.5.0  ​应急照明:</h4>
+<ul>
+<li>为了满足机房正常运行和人员工作的光线需求</li>
+<li>比如「安全出口」那些<h3 id="3-6-">3.6  ​布线系统</h3>
+</li>
+<li><strong>为了让 IDC 结构化布线的规范及设计负荷国家规范</strong><h3 id="3-7-">3.7  防雷接地系统</h3>
+</li>
+<li>​通过安装合理的设备和合理的布线，防止外部和内部引起的线路过电压对机房设备及人员安全造成的损害，主要有</li>
+</ul>
+</li>
+<li>​防雷设备 SPD</li>
+<li>接地设备<h3 id="3-8-">3.8 高品质机房供电系统相关</h3>
+<ul>
+<li><strong><em>高品质的机房供电系统体现在：无断电故障、高容错；在不影响负载运行的情况下课进行在线维护、有防雷、防雷电、防火、防水等保护功能</em></strong><h3 id="3-9-">3.9 机房市电故障分类</h3>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>市电类别</th>
+<th>平均月故障</th>
+<th>平均故障持续时间(单位 H)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一</td>
+<td>小于等于 1 次</td>
+<td>小于等于 0.5</td>
+</tr>
+<tr>
+<td>二</td>
+<td>小于等于 3.5 次</td>
+<td>小于等于 6</td>
+</tr>
+<tr>
+<td>三</td>
+<td>小于等于 4.5 次</td>
+<td>小于等于 8</td>
+</tr>
+<tr>
+<td>四</td>
+<td>经常</td>
+<td>昼夜</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-10-">3.10 供电系统电压等级</h3>
+<h4 id="3-10-0-">3.10.0  ​低压</h4>
+<ul>
+<li>交流 1000V</li>
+<li>直流 1200V 以下<h4 id="3-10-1-">3.10.1   中压</h4>
+</li>
+<li>一般在10 kV ~ 35 kV<h4 id="3-10-2-">3.10.2   高压</h4>
+</li>
+<li>一般在 110 kV ~ 330 kV<h4 id="3-10-3-">3.10.3   超高压</h4>
+</li>
+<li>一般在 500 kV<h4 id="3-10-4-">3.10.4  特高压</h4>
+</li>
+<li>一般在 750 kV 及其以上 「1000 kV」 <h3 id="3-11-">3.11 交流市电供电标准</h3>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标称电压「V」</th>
+<th style="text-align:center">受电端子电压变动范围「V」</th>
+<th style="text-align:center">频率标称值「Hz」</th>
+<th style="text-align:center">频率变动范围「Hz」</th>
+<th style="text-align:center">功率因数</th>
+<th style="text-align:center">功率因数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">220</td>
+<td style="text-align:center">187 ~ 242</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">正负 0.5</td>
+<td style="text-align:center">小于等于 100kVA</td>
+<td style="text-align:center">大于100 kVA</td>
+</tr>
+<tr>
+<td style="text-align:center">380</td>
+<td style="text-align:center">323 ~ 418</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">正负 0.5</td>
+<td style="text-align:center">大于等于 0.85</td>
+<td style="text-align:center">大于等于0.90</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>三相供电电压不平衡不大于 4%</li>
+<li>电压波形正弦畸变不大于 5%<h3 id="3-12-">3.12 高低压配电方式</h3>
+<h4 id="3-12-0-">3.12.0  放射式</h4>
+</li>
+<li><strong>单回路放电式</strong>(下图)<ul>
+<li><img src="https://vgy.me/9PYo3h.png" alt=""></li>
+</ul>
+</li>
+<li><strong>双回路放射式</strong><ul>
+<li><img src="https://vgy.me/AJIGkf.png" alt=""></li>
+</ul>
+</li>
+<li>优点<ul>
+<li>线路敷设简单</li>
+<li>维护方便</li>
+<li>供电可靠「不会受到其他电力用户的干扰」</li>
+<li>适用于 1 级负荷</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>要砸很多钱<h4 id="3-12-1-">3.12.1  树干式</h4>
+</li>
+</ul>
+</li>
+<li><img src="https://vgy.me/n5RYst.png" alt=""></li>
+<li>优点<ul>
+<li>降压变电所 6-10kV 的高压配电装置数量减少，投资相应可以减少</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>供电可靠性差「只要线路上任一段发生故障,那线路上的变电所就 GG」<h4 id="3-12-2-">3.12.2  链路式</h4>
+</li>
+</ul>
+</li>
+<li>解析<ul>
+<li>在一条供电干线上带多个用电设备或分配电箱，与树干式不同的是其线路的分支点
+在用电设备上或分配电箱内，即后面设备的电源引自前面设备的端子。</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>是线路上无分支点，适合穿管敷设或电缆线路，节省有色金属。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>线路或设备检修以及线路发生故障时，相连设备全部停电，供电的可靠性差。</li>
+<li>这种配电方式适用于暗敷设线路，供电可靠性要求不高的小容量设备，一般串联的设备不宜超过3～4台，总容量不宜超过10KW</li>
+</ul>
+</li>
+<li>图片
+-<img src="https://vgy.me/oyHXcX.png" alt=""><h3 id="3-13-">3.13  用配电白皮书链接</h3>
+</li>
+<li><a href="http://upload.idcquan.com/2014/0901/1409554333155.pdf">Click Here</a></li>
+</ul>
 
- .typora-export p, .typora-export .footnote-line {white-space: normal;} 
-</style>
-</head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name='header-n11050' class='md-header-anchor '></a>目录:</h1><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n11050"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11050">目录:</a></span><span class="md-toc-item md-toc-h1" data-ref="n11053"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11053">供配电基础知识(讲师:张浩楠) 日期:20181010~20181016</a></span><span class="md-toc-item md-toc-h2" data-ref="n11054"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11054">1.   术语 &amp; 单位</a></span><span class="md-toc-item md-toc-h3" data-ref="n11055"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11055">1.0   电流</a></span><span class="md-toc-item md-toc-h4" data-ref="n11056"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11056"><strong>1.0.0   定义</strong> </a></span><span class="md-toc-item md-toc-h4" data-ref="n11059"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11059"><strong>1.0.1   公式</strong></a></span><span class="md-toc-item md-toc-h3" data-ref="n11073"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11073">1.1   电流三要素</a></span><span class="md-toc-item md-toc-h4" data-ref="n11074"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11074">1.1.0  频率</a></span><span class="md-toc-item md-toc-h4" data-ref="n11095"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11095">1.1.1   幅值</a></span><span class="md-toc-item md-toc-h4" data-ref="n11105"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11105"><strong>1.1.2   相位</strong></a></span><span class="md-toc-item md-toc-h3" data-ref="n11171"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11171">1.2   交流电</a></span><span class="md-toc-item md-toc-h4" data-ref="n11172"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11172">1.2.0 定义</a></span><span class="md-toc-item md-toc-h4" data-ref="n11175"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11175">1.2.1 类比</a></span><span class="md-toc-item md-toc-h3" data-ref="n11181"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11181">1.3  直流电</a></span><span class="md-toc-item md-toc-h4" data-ref="n11183"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11183">1.3.0  含义</a></span><span class="md-toc-item md-toc-h3" data-ref="n11186"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11186">1.4 恒流电</a></span><span class="md-toc-item md-toc-h4" data-ref="n11188"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11188">1.4.0 含义</a></span><span class="md-toc-item md-toc-h3" data-ref="n11191"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11191">1.5 负载电流</a></span><span class="md-toc-item md-toc-h4" data-ref="n11193"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11193">1.5.0  容性负载电流</a></span><span class="md-toc-item md-toc-h4" data-ref="n11196"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11196">1.5.1  感性负载电流</a></span><span class="md-toc-item md-toc-h4" data-ref="n11200"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11200">1.5.2  注意点</a></span><span class="md-toc-item md-toc-h3" data-ref="n11204"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11204">1.6 特殊波形</a></span><span class="md-toc-item md-toc-h4" data-ref="n11206"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11206">1.6.0 方波</a></span><span class="md-toc-item md-toc-h3" data-ref="n11209"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11209">1.7 电压</a></span><span class="md-toc-item md-toc-h4" data-ref="n11211"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11211">1.7.0 前提</a></span><span class="md-toc-item md-toc-h5" data-ref="n11212"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11212">1.7.0.1 电源和电动势</a></span><span class="md-toc-item md-toc-h4" data-ref="n11219"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11219">1.7.1 公式</a></span><span class="md-toc-item md-toc-h3" data-ref="n11228"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11228">1.8 电压和电流的产物</a></span><span class="md-toc-item md-toc-h4" data-ref="n11237"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11237">1.8.0 电功</a></span><span class="md-toc-item md-toc-h3" data-ref="n11238"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11238">1.9 电功的延伸:电功率</a></span><span class="md-toc-item md-toc-h4" data-ref="n11239"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11239">1.9.0 定义</a></span><span class="md-toc-item md-toc-h4" data-ref="n11242"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11242">1.9.1 公式</a></span><span class="md-toc-item md-toc-h3" data-ref="n11252"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11252">1.10 电容</a></span><span class="md-toc-item md-toc-h4" data-ref="n11263"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11263">1.10.0 解析</a></span><span class="md-toc-item md-toc-h3" data-ref="n11266"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11266">1.11 功率</a></span><span class="md-toc-item md-toc-h4" data-ref="n11268"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11268">1.11.0 有功功率 P</a></span><span class="md-toc-item md-toc-h4" data-ref="n11276"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11276">1.11.1 无功功率 Q</a></span><span class="md-toc-item md-toc-h4" data-ref="n11290"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11290">1.11.2 视在功率 S</a></span><span class="md-toc-item md-toc-h4" data-ref="n11304"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11304">1.11.3 注意点</a></span><span class="md-toc-item md-toc-h4" data-ref="n11313"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11313">1.11.4 ​提高功率因数的意义</a></span><span class="md-toc-item md-toc-h4" data-ref="n11324"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11324">1.11.5 ​需要记住的公式</a></span><span class="md-toc-item md-toc-h4" data-ref="n11327"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11327">1.11.6 ​功率因数</a></span><span class="md-toc-item md-toc-h3" data-ref="n11330"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11330">1.12 矢量</a></span><span class="md-toc-item md-toc-h4" data-ref="n11332"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11332">含义</a></span><span class="md-toc-item md-toc-h3" data-ref="n11335"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11335">1.13 ​短路</a></span><span class="md-toc-item md-toc-h3" data-ref="n11341"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11341">1.14 接地</a></span><span class="md-toc-item md-toc-h4" data-ref="n11343"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11343">1.14.0解析</a></span><span class="md-toc-item md-toc-h3" data-ref="n11348"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11348">1.15 电弧</a></span><span class="md-toc-item md-toc-h4" data-ref="n11357"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11357">1.15.0 解析</a></span><span class="md-toc-item md-toc-h3" data-ref="n11362"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11362">1.16 ​一些放电现象</a></span><span class="md-toc-item md-toc-h4" data-ref="n11364"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11364">1.16.0 击穿</a></span><span class="md-toc-item md-toc-h4" data-ref="n11379"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11379">​1.16.1 沿面放电</a></span><span class="md-toc-item md-toc-h4" data-ref="n11388"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11388">1.16.2 ​闪络</a></span><span class="md-toc-item md-toc-h4" data-ref="n11395"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11395">1.16.3 以上放电现象相关图片</a></span><span class="md-toc-item md-toc-h2" data-ref="n11403"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11403">2.   常见符号</a></span><span class="md-toc-item md-toc-h3" data-ref="n11404"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11404">2.0 基本符号「依据灭弧能力从高到低排行」</a></span><span class="md-toc-item md-toc-h4" data-ref="n11405"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11405">2.0.0 隔离开关(刀开关)</a></span><span class="md-toc-item md-toc-h4" data-ref="n11410"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11410">2.0.1 负荷开关</a></span><span class="md-toc-item md-toc-h4" data-ref="n11419"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11419">2.0.2 断路器</a></span><span class="md-toc-item md-toc-h4" data-ref="n11435"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11435">2.0.3 ​熔断器</a></span><span class="md-toc-item md-toc-h3" data-ref="n11445"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11445">2.1 电路图相关符号</a></span><span class="md-toc-item md-toc-h3" data-ref="n11447"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11447">2.2 互锁开关</a></span><span class="md-toc-item md-toc-h4" data-ref="n11448"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11448">2.2.0 电气互锁</a></span><span class="md-toc-item md-toc-h2" data-ref="n11467"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11467">3.   数据中心基础设施</a></span><span class="md-toc-item md-toc-h3" data-ref="n11468"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11468">3.0 基础设施的全生命周期</a></span><span class="md-toc-item md-toc-h3" data-ref="n11470"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11470">3.1 数据中心供配电系统的组成</a></span><span class="md-toc-item md-toc-h4" data-ref="n11471"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11471">3.1.0 高压配电系统</a></span><span class="md-toc-item md-toc-h4" data-ref="n11472"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11472">3.1.0.1  主要高压电器种类</a></span><span class="md-toc-item md-toc-h4" data-ref="n11490"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11490">3.1.0.2高压配电一次设备</a></span><span class="md-toc-item md-toc-h4" data-ref="n11594"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11594">3.1.0.4  与一次设备相关的二次设备</a></span><span class="md-toc-item md-toc-h4" data-ref="n11602"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11602">3.1.0.5  高压交流供电系统</a></span><span class="md-toc-item md-toc-h3" data-ref="n11614"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11614">3.1.1 低压配电系统</a></span><span class="md-toc-item md-toc-h4" data-ref="n11621"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11621">3.1.1.0  讲师所说的解释</a></span><span class="md-toc-item md-toc-h4" data-ref="n11628"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11628">3.1.1.1 常用低压开关「相关图片在上面电路符号」</a></span><span class="md-toc-item md-toc-h3" data-ref="n11659"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11659">3.2  ​高低压配电基本模式</a></span><span class="md-toc-item md-toc-h4" data-ref="n11666"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11666">3.2.0  ​单回路线</a></span><span class="md-toc-item md-toc-h4" data-ref="n11676"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11676">3.2.1  ​环形干线</a></span><span class="md-toc-item md-toc-h4" data-ref="n11678"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11678">3.2.2  ​双回路供电</a></span><span class="md-toc-item md-toc-h4" data-ref="n11680"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11680">3.2.3  双母线双回路供电「现在常用」</a></span><span class="md-toc-item md-toc-h3" data-ref="n11682"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11682">3.3  ​应急电源系统</a></span><span class="md-toc-item md-toc-h4" data-ref="n11683"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11683">​3.3.0  应急柴油发电机</a></span><span class="md-toc-item md-toc-h4" data-ref="n11684"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11684">​3.3.1  蓄电池组</a></span><span class="md-toc-item md-toc-h3" data-ref="n11685"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11685">3.4  ​不间断电源系统</a></span><span class="md-toc-item md-toc-h4" data-ref="n11686"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11686">​3.4.0  蓄电池组</a></span><span class="md-toc-item md-toc-h4" data-ref="n11687"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11687">3.4.1  ​UPS 主体设备</a></span><span class="md-toc-item md-toc-h3" data-ref="n11688"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11688">3.5  ​照明及应急照明系统</a></span><span class="md-toc-item md-toc-h4" data-ref="n11689"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11689">3.5.0  ​应急照明:</a></span><span class="md-toc-item md-toc-h3" data-ref="n11694"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11694">3.6  ​布线系统</a></span><span class="md-toc-item md-toc-h3" data-ref="n11698"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11698">3.7  防雷接地系统</a></span><span class="md-toc-item md-toc-h3" data-ref="n11702"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11702">3.8 高品质机房供电系统相关</a></span><span class="md-toc-item md-toc-h3" data-ref="n11711"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11711">3.9 机房市电故障分类</a></span><span class="md-toc-item md-toc-h3" data-ref="n11734"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11734">3.10 供电系统电压等级</a></span><span class="md-toc-item md-toc-h4" data-ref="n11735"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11735">3.10.0  ​低压</a></span><span class="md-toc-item md-toc-h4" data-ref="n11740"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11740">3.10.1   中压</a></span><span class="md-toc-item md-toc-h4" data-ref="n11744"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11744">3.10.2   高压</a></span><span class="md-toc-item md-toc-h4" data-ref="n11748"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11748">3.10.3   超高压</a></span><span class="md-toc-item md-toc-h4" data-ref="n11752"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11752">3.10.4  特高压</a></span><span class="md-toc-item md-toc-h3" data-ref="n11756"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11756">3.11 交流市电供电标准</a></span><span class="md-toc-item md-toc-h3" data-ref="n11784"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11784">3.12 高低压配电方式</a></span><span class="md-toc-item md-toc-h4" data-ref="n11786"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11786">3.12.0  放射式</a></span><span class="md-toc-item md-toc-h4" data-ref="n11810"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11810">3.12.1  树干式</a></span><span class="md-toc-item md-toc-h4" data-ref="n11824"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11824">3.12.2  链路式</a></span><span class="md-toc-item md-toc-h3" data-ref="n11848"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n11848">3.13  用配电白皮书链接</a></span></p></div><h1><a name='header-n11053' class='md-header-anchor '></a>供配电基础知识(讲师:张浩楠) 日期:20181010~20181016</h1><h2><a name='header-n11054' class='md-header-anchor '></a>1.   术语 &amp; 单位</h2><h3><a name='header-n11055' class='md-header-anchor '></a>1.0   电流</h3><h4><a name='header-n11056' class='md-header-anchor '></a><strong>1.0.0   定义</strong> </h4><ul><li>电荷的<strong>定向运动</strong>叫做<strong><em>电流</em></strong>,金属导体中的自由电子在电厂力的作用下的<strong>定向运动</strong>,电解液中的<strong>正、负离子</strong>在电场力作用下向着<strong>相反方向</strong>的运动等都叫做<strong><em>电流</em></strong></li></ul><h4><a name='header-n11059' class='md-header-anchor '></a><strong>1.0.1   公式</strong></h4><ul><li><p><strong>I = q/t</strong></p></li><li><p><strong>公式解释</strong></p><ul><li>I = 电流,单位为<strong>安培</strong>,符号为 A</li><li>q = 通过导体横截面的电荷量,单位为<strong>库伦</strong>,符号为 C</li><li>t = 通过电荷量 q 所用的时间,单位为<strong>秒</strong>,符号为 S</li></ul></li></ul><h3><a name='header-n11073' class='md-header-anchor '></a>1.1   电流三要素</h3><h4><a name='header-n11074' class='md-header-anchor '></a>1.1.0  频率</h4><ul><li><p>相关图析：<img src='https://vgy.me/Do6znh.png' alt='' referrerPolicy='no-referrer' /></p></li><li><p>定义：</p><ul><li>单位时间内完成周期性变化的次数，是描述周期运动频率程度的量~</li></ul></li><li><p>常用单位：Hz  </p><ul><li><p>公用频率为<strong>50Hz</strong></p><ul><li>1 秒之内曲线内往返 50 次</li><li>相当于<strong>人类折返跑</strong> 50 次</li></ul></li></ul></li><li><p>表示符号为：fv</p></li></ul><h4><a name='header-n11095' class='md-header-anchor '></a>1.1.1   幅值</h4><ul><li><p>相关图析：<img src='https://vgy.me/Do6znh.png' alt='' referrerPolicy='no-referrer' /> </p></li><li><p>电压范围</p><ul><li>一般电压范围为 220V / 380V</li></ul></li><li><p>振幅</p><ul><li><p>定义</p><ul><li>正弦量<strong>正的最大值</strong></li></ul></li><li><p>表示符号</p><ul><li>Um &amp; Im 「大写字母加小写下标m」</li></ul></li><li><p>相关图析:<img src='https://vgy.me/mm22Im.png' alt='' referrerPolicy='no-referrer' /></p></li><li><p>有效值</p><ul><li><p>定义</p><ul><li>在工程应用中常用<strong><em>不变的量</em></strong><strong>有效值</strong>来表示<strong>正弦量幅值</strong>的大小</li><li>常用交流电表<strong>指示</strong>的<strong>电压、电流读数</strong>，那就是<strong>有效值</strong></li><li>交流设备名牌标注的<strong>电压</strong>、<strong>电流</strong>均为<strong>有效值</strong></li><li><strong>标准电压 220V</strong>也是指供电电压的<strong>有效值</strong></li></ul></li><li><p>有效值的确定</p><ul><li>将直流电流 <strong>I</strong> 和交流电流 <strong>i</strong> 通过阻值 <strong>R</strong> 的电阻在相同 <strong>T</strong> 的时间内,消耗相同的能量 <strong>Q</strong>，则称为 <strong>I</strong> 为 <strong>i</strong> 的<strong>有效值</strong></li><li>也就是说：<strong>与交流热效应相等的直流定义为交流电的有效值</strong></li></ul></li></ul></li></ul></li></ul><h4><a name='header-n11105' class='md-header-anchor '></a><strong>1.1.2   相位</strong></h4><ul><li><p>相关图析：<img src='https://vgy.me/Do6znh.png' alt='' referrerPolicy='no-referrer' /> </p><ul><li><p>单位：φ</p></li><li><p>公式:<img src='https://vgy.me/HCyV5e.png' alt='' referrerPolicy='no-referrer' /></p><ul><li>图中为 正弦量中的相位角</li></ul></li><li><p>初相位</p><ul><li><p>​φ t = 0 时的相位,称为初相位或初相角</p></li><li><p>图析</p><ul><li><img src='https://vgy.me/sS5UsU.png' alt='' referrerPolicy='no-referrer' /></li></ul></li><li><p>​(零点)计时起点</p><ul><li>​离原点最近波形从 0 变 + 与横轴的交点</li><li>​计时起点在原点<strong>左侧,则 &gt; 0 φ</strong></li><li>​计时起点在原点的<strong>右侧,则 &lt; 0 φ</strong></li></ul></li></ul></li></ul></li></ul><h3><a name='header-n11171' class='md-header-anchor '></a>1.2   交流电</h3><h4><a name='header-n11172' class='md-header-anchor '></a>1.2.0 定义</h4><ul><li>电流或电压方向随时间做周期性变化,在一个周期内的运行平均值为零</li></ul><h4><a name='header-n11175' class='md-header-anchor '></a>1.2.1 类比</h4><ul><li>一定会符合上面电流 3 要素的一致性</li><li>就类似人类一起搬重物时，用的 1 2 3 口号那样</li></ul><h3><a name='header-n11181' class='md-header-anchor '></a>1.3  直流电</h3><h4><a name='header-n11183' class='md-header-anchor '></a>1.3.0  含义</h4><ul><li>方向不随时间变化的电压或电流</li></ul><h3><a name='header-n11186' class='md-header-anchor '></a>1.4 恒流电</h3><h4><a name='header-n11188' class='md-header-anchor '></a>1.4.0 含义</h4><ul><li>​是特殊的直流电,大小和方向均不变的直流电</li></ul><h3><a name='header-n11191' class='md-header-anchor '></a>1.5 负载电流</h3><h4><a name='header-n11193' class='md-header-anchor '></a>1.5.0  容性负载电流</h4><ul><li><strong>它会超前于电压</strong></li></ul><h4><a name='header-n11196' class='md-header-anchor '></a>1.5.1  感性负载电流</h4><ul><li><strong>它会滞后于电压</strong></li></ul><h4><a name='header-n11200' class='md-header-anchor '></a>1.5.2  注意点</h4><ul><li><strong>滞后和超前指的都是相位，不是时间</strong></li></ul><h3><a name='header-n11204' class='md-header-anchor '></a>1.6 特殊波形</h3><h4><a name='header-n11206' class='md-header-anchor '></a>1.6.0 方波</h4><ul><li>图析
-<img src='https://vgy.me/avvkAl.png' alt='' referrerPolicy='no-referrer' /></li></ul><h3><a name='header-n11209' class='md-header-anchor '></a>1.7 电压</h3><h4><a name='header-n11211' class='md-header-anchor '></a>1.7.0 前提</h4><h5><a name='header-n11212' class='md-header-anchor '></a>1.7.0.1 电源和电动势</h5><ul><li><p>当电源内部,当局外力不断地把正电荷从地电位移到高电位的过程中,局外力要反抗电场力做功,这个做功过程就是电源将其他形式的能量转换成电能的过程。</p></li><li><p>为衡量不同电源转换能量的本领，引入电动势「简称电势」这个物理量</p></li><li><p>​定义</p><ul><li>在电源内部，局外力把正电荷从低电位「负极板」移到高电位，局外力所做的功「电源增加的的电能」 </li></ul></li></ul><h4><a name='header-n11219' class='md-header-anchor '></a>1.7.1 公式</h4><ul><li><p><strong>E = w/q</strong></p></li><li><p>公式解析</p><ul><li>E : 电源电动势,单位是伏特,符号为 V</li><li>w : 电源力移动正电荷做的功,单位是焦耳,符号为 J</li><li>q : 电源力移动的电荷量,单位是库仑,符号为 C</li></ul></li></ul><h3><a name='header-n11228' class='md-header-anchor '></a>1.8 电压和电流的产物</h3><h4><a name='header-n11237' class='md-header-anchor '></a>1.8.0 电功</h4><h3><a name='header-n11238' class='md-header-anchor '></a>1.9 电功的延伸:电功率</h3><h4><a name='header-n11239' class='md-header-anchor '></a>1.9.0 定义</h4><ul><li><strong>单位时间内电能所做的功叫「电功率」</strong></li></ul><h4><a name='header-n11242' class='md-header-anchor '></a>1.9.1 公式</h4><ul><li><p><strong>P = W/t = UIt/t = UI</strong></p></li><li><p>** P = UI = IRI = I2R**</p></li><li><p>** P = U2/R**</p></li><li><p>公式解释</p><ul><li>U : 加压于用电设备两端电压「单位为伏特」</li><li>I : 通过用电设备的电流「单位为安培」</li><li>t : ​用电设备耗电的时间「单位为秒」</li><li>W : ​用功单位 「瓦特·秒」</li></ul></li></ul><h3><a name='header-n11252' class='md-header-anchor '></a>1.10 电容</h3><h4><a name='header-n11263' class='md-header-anchor '></a>1.10.0 解析</h4><ul><li><strong>​电容不做功 只储能</strong></li></ul><h3><a name='header-n11266' class='md-header-anchor '></a>1.11 功率</h3><h4><a name='header-n11268' class='md-header-anchor '></a>1.11.0 有功功率 P</h4><ul><li><p><strong>定义</strong></p><ul><li>交流电路中，凡是消耗在电阻原件上，功率不可逆转换的那部分功率「转换热能、光能、机械能」称为有功功率</li></ul></li><li><p><strong>单位</strong></p><ul><li>瓦「W」</li><li>千瓦「kW」</li></ul></li></ul><h4><a name='header-n11276' class='md-header-anchor '></a>1.11.1 无功功率 Q</h4><ul><li><p><strong>定义</strong></p><ul><li>​将电感或电容原件与交流电源往复交换的功率称之为无功功率，用 Q 表示</li></ul></li><li><p><strong>单位</strong></p><ul><li>乏「Var」</li><li>千乏「kVar」</li></ul></li></ul><h4><a name='header-n11290' class='md-header-anchor '></a>1.11.2 视在功率 S</h4><ul><li><p><strong>定义</strong></p><ul><li>交流电源提供的总功率，在数值上是交流电路中电压与电流的乘积，用 S 表示</li></ul></li><li><p><strong>单位</strong></p><ul><li>伏安「VA」</li><li>千伏安「kVA」</li></ul></li></ul><h4><a name='header-n11304' class='md-header-anchor '></a>1.11.3 注意点</h4><ul><li><p><strong>公式 Sn = UnIn</strong></p><ul><li>称为发电机、变压器等供电设施设备的容量，可用来衡量发电机、变压器可能提供的最大有功功率</li><li>图析<img src='https://vgy.me/YxYvIL.png' alt='' referrerPolicy='no-referrer' /></li></ul></li></ul><h4><a name='header-n11313' class='md-header-anchor '></a>1.11.4 ​提高功率因数的意义</h4><ol start='' ><li>充分利用电源设备的容量</li><li>减少线路和发电机绕组的功率损耗</li></ol><h4><a name='header-n11324' class='md-header-anchor '></a>1.11.5 ​需要记住的公式</h4><p><img src='https://vgy.me/hq2KlR.png' alt='' referrerPolicy='no-referrer' /></p><h4><a name='header-n11327' class='md-header-anchor '></a>1.11.6 ​功率因数</h4><ul><li>不可能超过 1 </li></ul><h3><a name='header-n11330' class='md-header-anchor '></a>1.12 矢量</h3><h4><a name='header-n11332' class='md-header-anchor '></a>含义</h4><ul><li>​带有大小和方向的量</li></ul><h3><a name='header-n11335' class='md-header-anchor '></a>1.13 ​短路</h3><ul><li>​电流无穷大</li><li>电压变为 0</li></ul><h3><a name='header-n11341' class='md-header-anchor '></a>1.14 接地</h3><h4><a name='header-n11343' class='md-header-anchor '></a>1.14.0解析</h4><ul><li><p>电会从电阻比较小的地方流走</p></li><li><p>比方说</p><ul><li>人体大概有 1500 欧「打比方的」</li><li>​接地大概有 4 欧</li><li>如果有<strong>接地</strong>的话,电流会先试试<strong>人身体上的电阻</strong>,所以人体<strong>会被电到一下</strong>,也就是<strong>电试试能不能通行</strong>,结果<strong>电觉得电阻大</strong>,无法通行,然后再窜到接地,觉得电阻真小,然后才从接地 4 欧那里,溜出去</li></ul></li></ul><h3><a name='header-n11348' class='md-header-anchor '></a>1.15 电弧</h3><h4><a name='header-n11357' class='md-header-anchor '></a>1.15.0 解析</h4><ul><li>​带电的导线</li><li>它会随着空气一起飘走</li></ul><h3><a name='header-n11362' class='md-header-anchor '></a>1.16 ​一些放电现象</h3><h4><a name='header-n11364' class='md-header-anchor '></a>1.16.0 击穿</h4><ul><li><p>解析</p><ul><li>​沿绝缘体内部放电</li></ul></li><li><p>击穿条件:</p><ul><li>一定​需要标准空气,标准空气条件如下</li><li>25 摄氏度,50% 湿度,1 个<a href='http://baike.baidu.com/link?url=Q8PPLyXXPWQwANrG8JcFsEDB8us5W2-VRSGDGAVEPRcExb2uKdDbgPtaxnX5Z43KRaXSsKF7IF0Im6RN5Yq_Jq5bP3AN_EfEYP6eZv0Q4yz29X7xRE2dYtUgQ7ewyA17dmjNM2UumIfpx6QFNbN10K'>大气压</a></li></ul></li><li><p>电压击穿空气</p><ul><li>每 30kV 电压击穿1cm 空气</li><li>当电压升高时，每 cm 击穿电压下降
-如 2250kV 可击穿 150cm 标准天气</li></ul></li></ul><h4><a name='header-n11379' class='md-header-anchor '></a>​1.16.1 沿面放电</h4><ul><li><p>解析</p><ul><li>沿绝缘体和空气分界面上发生的放电现象</li></ul></li></ul><h4><a name='header-n11388' class='md-header-anchor '></a>1.16.2 ​闪络</h4><ul><li><p>解析</p><ul><li>沿面放电发展到贯穿性空气击穿，称为「闪络」</li><li>​沿面闪络电压比气体或固体单独存在时的击穿电压低</li></ul></li></ul><h4><a name='header-n11395' class='md-header-anchor '></a>1.16.3 以上放电现象相关图片</h4><p><img src='https://vgy.me/yZ0hOD.png' alt='' referrerPolicy='no-referrer' /></p><h2><a name='header-n11403' class='md-header-anchor '></a>2.   常见符号</h2><h3><a name='header-n11404' class='md-header-anchor '></a>2.0 基本符号「依据灭弧能力从高到低排行」</h3><h4><a name='header-n11405' class='md-header-anchor '></a>2.0.0 隔离开关(刀开关)</h4><ul><li><p>相关图片
-<img src='https://vgy.me/3jXqVt.png' alt='' referrerPolicy='no-referrer' /></p></li><li><p>注意点</p><ul><li>不能带载操作</li></ul></li></ul><h4><a name='header-n11410' class='md-header-anchor '></a>2.0.1 负荷开关</h4><ul><li><p>相关图片(图片所示类圆形为「半球形」)
-<img src='https://vgy.me/WcIT1l.png' alt='' referrerPolicy='no-referrer' /></p></li><li><p>注意点</p><ul><li>可带正常负载操作 </li></ul></li></ul><h4><a name='header-n11419' class='md-header-anchor '></a>2.0.2 断路器</h4><ul><li><p>相关图片
-<img src='https://vgy.me/jYSTpo.png' alt='' referrerPolicy='no-referrer' /></p></li><li><p>具有过流、短路保护功能</p></li><li><p>往上推是「合闸」</p><ul><li>「合闸」就是把电闸合上的意思， &quot;合闸送电&quot;的&quot;合闸&quot;就是将需要送电线路的开关进行操作,使负荷开关闭合的意思</li></ul></li><li><p>​往下推是 分闸</p><ul><li>分闸,应用于电力系统,是指断路器由合闸位置转为断开位置</li></ul></li></ul><h4><a name='header-n11435' class='md-header-anchor '></a>2.0.3 ​熔断器</h4><ul><li>相关图片
-<img src='https://vgy.me/CLC760.png' alt='' referrerPolicy='no-referrer' /></li><li>类似于「保险丝」,如果短路，那就会被直接烧断了</li></ul><h3><a name='header-n11445' class='md-header-anchor '></a>2.1 电路图相关符号</h3><p><img src='https://vgy.me/LY7jsn.png' alt='' referrerPolicy='no-referrer' />
-<img src='https://vgy.me/oUpI0p.png' alt='' referrerPolicy='no-referrer' />
-<img src='https://vgy.me/wclUZL.png' alt='' referrerPolicy='no-referrer' />
-<img src='https://vgy.me/YYKDDt.png' alt='' referrerPolicy='no-referrer' /></p><h3><a name='header-n11447' class='md-header-anchor '></a>2.2 互锁开关</h3><h4><a name='header-n11448' class='md-header-anchor '></a>2.2.0 电气互锁</h4><ul><li><p>定义</p><ul><li>电气控制中互锁主要是为保证电器安全运行而设置的</li><li>它主要是由两电器元件互相控制而形成互锁的</li></ul></li><li><p>​实质:</p><ul><li>电器互锁就是,将这两个继电器的常闭触电接入另一个继电器的线圈控制回路里.这样,一个继电器得电动作,另一个继电器线圈上就不可能形成闭合回路。但也可以用机械联杆实现这一动作。</li></ul></li><li><p>实例：</p><ul><li>如下图，其中 KM1 与 KM2 为电器互锁，当 SB1 按下的同时按下 SB2 ，SB2 将不起作用，这样防止主电路短路
-<img src='https://vgy.me/spW6zC.png' alt='' referrerPolicy='no-referrer' /></li></ul></li></ul><h2><a name='header-n11467' class='md-header-anchor '></a>3.   数据中心基础设施</h2><h3><a name='header-n11468' class='md-header-anchor '></a>3.0 基础设施的全生命周期</h3><p><strong>设计--&gt;施工--&gt;测试--&gt;验收支付--&gt;运行</strong></p><h3><a name='header-n11470' class='md-header-anchor '></a>3.1 数据中心供配电系统的组成</h3><h4><a name='header-n11471' class='md-header-anchor '></a>3.1.0 高压配电系统</h4><h4><a name='header-n11472' class='md-header-anchor '></a>3.1.0.1  主要高压电器种类</h4><ul><li><p>开关电器：如断路器、隔离开关、负荷开关、接地开关等；</p></li><li><p>保护电器：如熔断器、避雷器；</p></li><li><p>测量电器：如电压互感器、电流互感器；</p><ul><li>​电流互感器:二次侧不允许开路</li><li>电压互感器: ​二次侧不允许短路</li></ul></li><li><p>限流电器：如电抗器、电阻器；</p></li><li><p>成套电器与组合电器；</p></li><li><p>其他：如电力电容器。</p></li></ul><h4><a name='header-n11490' class='md-header-anchor '></a>3.1.0.2高压配电一次设备</h4><ul><li><p>​高压开关柜</p><ul><li><p>「又叫成套开关或成套配电装置」</p></li><li><p>相关图片
-<img src='https://vgy.me/cgOkks.png' alt='' referrerPolicy='no-referrer' />
-<img src='https://vgy.me/TMcVTE.png' alt='' referrerPolicy='no-referrer' /></p></li><li><p>高压开关柜五防</p><ul><li>防止带电荷合闸</li><li>防止带接地线合闸</li><li>​防止误入带电间隔</li><li>防止带电挂接地线</li><li>防止带负荷拉隔离柜「或者隔离刀闸」</li></ul></li><li><p>它是以断路器为主的电器设备</p></li><li><p>高压开关柜型号</p><ul><li><p>KYN-28A</p><ul><li>K 表示 铠装 </li><li>Y 表示 可移动</li><li>N 表示 户内</li><li>中文全名:户内金属铠装移开式开关设备</li><li>额定电压 3.6kV~12kV</li></ul></li><li><p>优点</p><ul><li>占地少</li><li>安装、使用方便</li><li>适用于大量生产</li><li></li></ul></li></ul></li></ul></li><li><p>​高压断路器</p><ul><li><p>​LN2-10/1600型高压断路器</p><ul><li><p>是指额定高压为 <strong>10kV ，额定电流为 1600A</strong>，额定短路开断电流为 31.5kA 的户内型六氟化硫断路器</p></li><li><p>名词解释</p><ul><li>L：六氟化硫断路器</li><li>N：户内型</li><li>2：设计序号</li><li>10：额定电压</li><li>1600：额定电流，单位为 A</li><li>31.5：额定短路开断电流,单位为 kA</li></ul></li></ul></li><li><p>GW6-35W/1000型隔离开关</p><ul><li><p>是指户外型,额定电压为 35kV，额定电流为 1000A，适用于污秽地区的高压隔离开关</p></li><li><p>名词解释：</p><ul><li>G:高压隔离开关</li><li>W:户外型</li><li>6:设计序号</li><li>35:额定电压 kV</li><li>W:防污型</li><li>1000A:额定电流 A</li></ul></li></ul></li></ul></li><li><p>高压电缆</p><ul><li><p>含义:</p><ul><li>高压电缆是<strong>电力电缆</strong>的一种，是用于传输<strong><em>10kv-35kv</em></strong>之间的电力电缆，多应用于传输的主干道，高压电缆的产品执行标准是<strong>gb/t</strong>。特高压电缆是随着电缆技术的不断发展而出现的一种电力电缆，特高压电缆一般作为大型的输电枢纽，属于技术含量较高的一种高压电缆，主要用于较远距离的传输。</li></ul></li></ul></li><li><p>互感器</p></li></ul><h4><a name='header-n11594' class='md-header-anchor '></a>3.1.0.4  与一次设备相关的二次设备</h4><ul><li>继电保护装置</li><li>测量装置</li><li>操控电路</li></ul><h4><a name='header-n11602' class='md-header-anchor '></a>3.1.0.5  高压交流供电系统</h4><ul><li><p>发电厂</p></li><li><p>电力线路</p></li><li><p>变电站</p></li><li><p>电力用户</p></li><li><p>图析</p><ul><li><img src='https://vgy.me/XnCv5w.png' alt='' referrerPolicy='no-referrer' /></li><li>​经历<strong>生产、输送、变换、分配</strong>四个环节</li></ul></li></ul><h3><a name='header-n11614' class='md-header-anchor '></a>3.1.1 低压配电系统</h3><h4><a name='header-n11621' class='md-header-anchor '></a>3.1.1.0  讲师所说的解释</h4><ul><li>一个节点不用安装那么多的「断路器」</li><li>接触不良的区域电阻会放大，电阻放大会发热</li><li>有变压器的地方都是从高压那边连接过来的,所以叫「市电进线」</li></ul><h4><a name='header-n11628' class='md-header-anchor '></a>3.1.1.1 常用低压开关「相关图片在上面电路符号」</h4><ul><li><p>​隔离开关</p><ul><li>千万<strong>不能带载操作</strong></li></ul></li><li><p>​负荷开关</p><ul><li>有基本灭弧装置，能切断正常电流</li></ul></li><li><p>​断路器</p><ul><li><p>作用是<strong>​过流保护。短路保护</strong></p><ul><li><p>相关型号</p><ul><li>​<a href='https://www.zjtcn.com/zhishi/acbkqdlq/'>ACB 空气断路器</a></li><li><a href='http://baike.baidu.com/link?url=jbdnJpXd8dW5-PRqK7mEfza6wnrUQAy3wFNFDdagSzn-Da671GK801m94yUQgY34dV4uKUJW4tD_CIArJJzNW088qx3EH1jU9BlJkwIRNzuYdULEtPigMslfYzhRMd4DmichQWXtpG7HjGqgwW9gTYSjo9vpGXUCF2lJDNbekqW4qD2PXMidZcHCsmJ3kZx9'>MCCB 塑壳断路器</a></li><li><a href='https://baike.baidu.com/item/%E5%B0%8F%E5%9E%8B%E6%96%AD%E8%B7%AF%E5%99%A8/9860635'>​MCB 小型断路器</a></li><li><a href='http://www.baike.com/wiki/%E6%A1%86%E6%9E%B6%E5%BC%8F%E6%96%AD%E8%B7%AF%E5%99%A8'>​框架断路器</a></li></ul></li></ul></li></ul></li><li><p>​熔断器</p><ul><li>作用:<strong>严重过流保护、短路保护</strong></li></ul></li></ul><h3><a name='header-n11659' class='md-header-anchor '></a>3.2  ​高低压配电基本模式</h3><ul><li><p>下面图片中的一些解释</p><ul><li>MV = 10kV</li><li>LV = 380V</li><li>MLVS = 低压主开关盘</li></ul></li></ul><h4><a name='header-n11666' class='md-header-anchor '></a>3.2.0  ​单回路线</h4><p><img src='https://vgy.me/Hx7EUj.png' alt='' referrerPolicy='no-referrer' /></p><h4><a name='header-n11676' class='md-header-anchor '></a>3.2.1  ​环形干线</h4><p><img src='https://vgy.me/Sd5qAE.png' alt='' referrerPolicy='no-referrer' /></p><h4><a name='header-n11678' class='md-header-anchor '></a>3.2.2  ​双回路供电</h4><p><img src='https://vgy.me/z2u5nZ.png' alt='' referrerPolicy='no-referrer' /></p><h4><a name='header-n11680' class='md-header-anchor '></a>3.2.3  双母线双回路供电「现在常用」</h4><p><img src='https://vgy.me/T356Ga.png' alt='' referrerPolicy='no-referrer' /></p><h3><a name='header-n11682' class='md-header-anchor '></a>3.3  ​应急电源系统</h3><h4><a name='header-n11683' class='md-header-anchor '></a>​3.3.0  应急柴油发电机</h4><h4><a name='header-n11684' class='md-header-anchor '></a>​3.3.1  蓄电池组</h4><h3><a name='header-n11685' class='md-header-anchor '></a>3.4  ​不间断电源系统</h3><h4><a name='header-n11686' class='md-header-anchor '></a>​3.4.0  蓄电池组</h4><h4><a name='header-n11687' class='md-header-anchor '></a>3.4.1  ​UPS 主体设备</h4><h3><a name='header-n11688' class='md-header-anchor '></a>3.5  ​照明及应急照明系统</h3><h4><a name='header-n11689' class='md-header-anchor '></a>3.5.0  ​应急照明:</h4><ul><li>为了满足机房正常运行和人员工作的光线需求</li><li>比如「安全出口」那些</li></ul><h3><a name='header-n11694' class='md-header-anchor '></a>3.6  ​布线系统</h3><ul><li><strong>为了让 IDC 结构化布线的规范及设计负荷国家规范</strong></li></ul><h3><a name='header-n11698' class='md-header-anchor '></a>3.7  防雷接地系统</h3><ul><li><p>​通过安装合理的设备和合理的布线，防止外部和内部引起的线路过电压对机房设备及人员安全造成的损害，主要有</p><ul><li>​防雷设备 SPD</li><li>接地设备</li></ul></li></ul><h3><a name='header-n11702' class='md-header-anchor '></a>3.8 高品质机房供电系统相关</h3><ul><li><strong><em>高品质的机房供电系统体现在：无断电故障、高容错；在不影响负载运行的情况下课进行在线维护、有防雷、防雷电、防火、防水等保护功能</em></strong></li></ul><h3><a name='header-n11711' class='md-header-anchor '></a>3.9 机房市电故障分类</h3><figure><table><thead><tr><th>市电类别</th><th>平均月故障</th><th>平均故障持续时间(单位 H)</th></tr></thead><tbody><tr><td>一</td><td>小于等于 1 次</td><td>小于等于 0.5</td></tr><tr><td>二</td><td>小于等于 3.5 次</td><td>小于等于 6</td></tr><tr><td>三</td><td>小于等于 4.5 次</td><td>小于等于 8</td></tr><tr><td>四</td><td>经常</td><td>昼夜</td></tr></tbody></table></figure><h3><a name='header-n11734' class='md-header-anchor '></a>3.10 供电系统电压等级</h3><h4><a name='header-n11735' class='md-header-anchor '></a>3.10.0  ​低压</h4><ul><li>交流 1000V</li><li>直流 1200V 以下</li></ul><h4><a name='header-n11740' class='md-header-anchor '></a>3.10.1   中压</h4><ul><li>一般在10 kV ~ 35 kV</li></ul><h4><a name='header-n11744' class='md-header-anchor '></a>3.10.2   高压</h4><ul><li>一般在 110 kV ~ 330 kV</li></ul><h4><a name='header-n11748' class='md-header-anchor '></a>3.10.3   超高压</h4><ul><li>一般在 500 kV</li></ul><h4><a name='header-n11752' class='md-header-anchor '></a>3.10.4  特高压</h4><ul><li>一般在 750 kV 及其以上 「1000 kV」 </li></ul><h3><a name='header-n11756' class='md-header-anchor '></a>3.11 交流市电供电标准</h3><figure><table><thead><tr><th style='text-align:center;' >标称电压「V」</th><th style='text-align:center;' >受电端子电压变动范围「V」</th><th style='text-align:center;' >频率标称值「Hz」</th><th style='text-align:center;' >频率变动范围「Hz」</th><th style='text-align:center;' >功率因数</th><th style='text-align:center;' >功率因数</th></tr></thead><tbody><tr><td style='text-align:center;' >220</td><td style='text-align:center;' >187 ~ 242</td><td style='text-align:center;' >50</td><td style='text-align:center;' >正负 0.5</td><td style='text-align:center;' >小于等于 100kVA</td><td style='text-align:center;' >大于100 kVA</td></tr><tr><td style='text-align:center;' >380</td><td style='text-align:center;' >323 ~ 418</td><td style='text-align:center;' >50</td><td style='text-align:center;' >正负 0.5</td><td style='text-align:center;' >大于等于 0.85</td><td style='text-align:center;' >大于等于0.90</td></tr></tbody></table></figure><ul><li>三相供电电压不平衡不大于 4%</li><li>电压波形正弦畸变不大于 5%</li></ul><h3><a name='header-n11784' class='md-header-anchor '></a>3.12 高低压配电方式</h3><h4><a name='header-n11786' class='md-header-anchor '></a>3.12.0  放射式</h4><ul><li><p><strong>单回路放电式</strong>(下图)</p><ul><li><img src='https://vgy.me/9PYo3h.png' alt='' referrerPolicy='no-referrer' /></li></ul></li><li><p><strong>双回路放射式</strong></p><ul><li><img src='https://vgy.me/AJIGkf.png' alt='' referrerPolicy='no-referrer' /></li></ul></li><li><p>优点</p><ul><li>线路敷设简单</li><li>维护方便</li><li>供电可靠「不会受到其他电力用户的干扰」</li><li>适用于 1 级负荷</li></ul></li><li><p>缺点</p><ul><li>要砸很多钱</li></ul></li></ul><h4><a name='header-n11810' class='md-header-anchor '></a>3.12.1  树干式</h4><ul><li><p><img src='https://vgy.me/n5RYst.png' alt='' referrerPolicy='no-referrer' /></p></li><li><p>优点</p><ul><li>​降压变电所 6-10kV 的高压配电装置数量减少，投资相应可以减少</li></ul></li><li><p>缺点</p><ul><li>供电可靠性差「只要线路上任一段发生故障,那线路上的变电所就 GG」</li></ul></li></ul><h4><a name='header-n11824' class='md-header-anchor '></a>3.12.2  链路式</h4><ul><li><p>解析</p><ul><li>在一条供电干线上带多个用电设备或分配电箱，与树干式不同的是其线路的分支点
-在用电设备上或分配电箱内，即后面设备的电源引自前面设备的端子。</li></ul></li><li><p>优点</p><ul><li>是线路上无分支点，适合穿管敷设或电缆线路，节省有色金属。</li></ul></li><li><p>缺点</p><ul><li>线路或设备检修以及线路发生故障时，相连设备全部停电，供电的可靠性差。</li><li>这种配电方式适用于暗敷设线路，供电可靠性要求不高的小容量设备，一般串联的设备不宜超过3～4台，总容量不宜超过10KW</li></ul></li><li><p>图片
--<img src='https://vgy.me/oyHXcX.png' alt='' referrerPolicy='no-referrer' /></p></li></ul><h3><a name='header-n11848' class='md-header-anchor '></a>3.13  用配电白皮书链接</h3><ul><li><a href='http://upload.idcquan.com/2014/0901/1409554333155.pdf'>Click Here</a></li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
-</body>
+          	</article>
+        </div>
+		</div>
+  </body>
 </html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
