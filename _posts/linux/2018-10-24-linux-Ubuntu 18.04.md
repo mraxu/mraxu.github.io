@@ -1,3 +1,4 @@
+---
 layout: post
 title:  Ubuntu 18.04 无法打开网易云音乐窗口
 description: 
@@ -10,7 +11,7 @@ image:
   feature: posts_header/abstract-7.jpg
   credit:
   creditlink:
-
+---
 ## 问题描述
 
 - 网易云版本 `1.1.0` 安装后点击图标无法启动，只能终端通过 `sudo netease-cloud-music`
