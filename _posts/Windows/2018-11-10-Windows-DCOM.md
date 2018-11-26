@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  没有在要求的超时时间内向 DCOM 注册”的错误解决
+title:  Windows 没有在要求的超时时间内向 DCOM 注册”的错误解决
 description: 没有在要求的超时时间内向 DCOM 注册”的错误解决
 modified: 2018-11-10 13:20:20
 tags: [Windows]
