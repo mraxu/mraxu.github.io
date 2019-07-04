@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Linux DHCP 学习你急
+title:  Linux DHCP 学习笔记
 description:
 modified: 2019-07-04 15:20:20
 tags: [linux]
