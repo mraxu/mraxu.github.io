@@ -26,7 +26,7 @@ image:
 
 - 注册完成之后打开下面这个界面
 
-  ![](https://gitee.com/axu8/pic-bed/raw/master/uPic/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_566ab68e-3160-49a1-b0fe-e8a5c58651c0.png)
+  ![Alt text]({{site.url}}/images/posts_image/i.png))
 
 - 看到上面图片设置邮箱, 设置你注册的 freenom 账号
 
