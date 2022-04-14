@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  邮箱
+title:  使用 freenom + 企业微信实现名称后缀(完全免费!)
 description: "无"
 modified: 2022-04-06 10:20:20
 tags: [IT]
