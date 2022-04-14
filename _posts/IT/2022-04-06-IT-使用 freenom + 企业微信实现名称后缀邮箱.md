@@ -26,7 +26,7 @@ image:
 
 - 注册完成之后打开下面这个界面
 
-  ![Alt text]({{site.url}}/images/posts_image/i.png))
+  ![Alt text]({{site.url}}/images/posts_image/i.png)
 
 - 看到上面图片设置邮箱, 设置你注册的 freenom 账号
 
@@ -78,7 +78,7 @@ image:
   >
   > Thank you for using Freenom
 
-  ![](https://gitee.com/axu8/pic-bed/raw/master/uPic/Snipaste_2022-04-07_15-10-49.png)
+  ![click]({{site.url}}/images/posts_image/68747470733a2f2f67697465652e636f6d2f617875382f7069632d6265642f7261772f6d61737465722f755069632f536e6970617374655f323032322d30342d30375f31352d31302d34392e706e67.png.png)
   
 - 理论上你进行到这步骤就可以使用企业微信收发邮件了
 
@@ -92,8 +92,8 @@ image:
 
 #### 4.1 使用 QQ 邮箱测试发送
 
-![](https://gitee.com/axu8/pic-bed/raw/master/uPic/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_5f6b2cc9-2e0e-494b-9f7d-7c5c751cdbb6.png)
+![]({{site.url}}/images/posts_image/68747470733a2f2f67697465652e636f6d2f617875382f7069632d6265642f7261772f6d61737465722f755069632f25453425424325383125453425423825394125453525424525414525453425424625413125453625383825414.png)
 
 ### 4.2 使用企业微信测试接收以及回复
 
-![](https://gitee.com/axu8/pic-bed/raw/master/uPic/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_06543677-770a-49df-9a0a-c12d392ece1a.png)
+![]({{site.url}}/images/posts_image/68747470733a2f2f67697465652e636f6d2f617875382f7069632d6265642f7261772f6d61737465722f755069632f25453425424325383125453425423825394125453525424525414525453425424625413125453625383825414-1.png)
