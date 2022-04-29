@@ -44,7 +44,7 @@ mtr [-hvrctglspni46] [-help] [-version] [-report] [-report-cycles=COUNT] [-curse
 ```
 ## 说明
 默认配置下，返回结果中各数据列的说明如下。
-
+```
     第一列（Host）：节点IP地址和域名。如前面所示，按n键可以切换显示。
 
     第二列（Loss%）：节点丢包率。
@@ -56,4 +56,5 @@ mtr [-hvrctglspni46] [-help] [-version] [-report] [-report-cycles=COUNT] [-curse
     第五、六、七列（Avg、Best、Wrst）：分别是探测延迟的平均值、最小值和最大值。
 
     第八列（StDev）：标准偏差。越大说明相应节点越不稳定。
+```
 ![]({{site.url}}/images/posts_image/Snipaste_2022-04-29_14-44-06.png)
