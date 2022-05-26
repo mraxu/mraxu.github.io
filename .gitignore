@@ -8,3 +8,4 @@ Gemfile.lock
 .sass-cache
 .jekyll-metadata
 *.~vsdx
+assets/js/plugins/emojify/css/.emojify.min.css.icloud
