@@ -37,8 +37,8 @@ owner:
 
 # SEO
 seo:
-  title:  IT博客,Linux,Centos,RetHat,RAID
-  description: 服务器技术博客,核心IT技术包括：Linux,Windows Server,RAID
+  title:  IT博客,Linux,Centos,RetHat,Network
+  description: 服务器技术博客,核心IT技术包括：Linux,Windows Server,Network
 
 # Background image to be tiled on all pages
 background:
