@@ -68,7 +68,7 @@ kramdown:
 # redcarpet:
 #   extensions: [with_toc_data]
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
