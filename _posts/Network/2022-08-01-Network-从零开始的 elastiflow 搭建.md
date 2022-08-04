@@ -1,5 +1,5 @@
 ---
-layout: post
+layout:post
 title:  elastiflow 从零开始搭建
 description: "无"
 modified: 2022-08-01 10:20:20
