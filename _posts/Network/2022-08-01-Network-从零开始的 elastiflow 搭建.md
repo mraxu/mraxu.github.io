@@ -6,7 +6,7 @@ modified: 2022-08-01 10:20:20
 tags: [Network]
 post_type: developer
 blogid: 20220801102020
-categories: [network ]
+categories: [network]
 image:
   feature: posts_header/abstract-7.jpg
   credit:
