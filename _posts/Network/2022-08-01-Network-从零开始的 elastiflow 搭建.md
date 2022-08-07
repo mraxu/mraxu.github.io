@@ -19,6 +19,7 @@ image:
 - centos 7
 - 4U+32G
 ## linux 命令
+
 ```
 # centos 安装 docker
 yum -y install docker
@@ -26,13 +27,15 @@ yum -y install docker
 curl -L "https://wood-bucket.oss-cn-beijing.aliyuncs.com/Linux/Docker/docker-compose-Linux-x86_64-1.29.1" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
 ## docker-compose 部署
 ### 创建 docker-compose.yml 文件
 ```
 touch docker-compose.yml
 ```
-复制下面的命令到 docker-compose.yml 文件
-```shell
+- 复制下面的命令到 docker-compose.yml 文件
+```
 version: '3'
 
 services:
@@ -145,11 +148,13 @@ services:
       ELASTIFLOW_IPFIX_UDP_QUEUE_SIZE: 4096
       ELASTIFLOW_IPFIX_UDP_RCV_BUFF: 33554432
 ```
-静静等待 pull 镜像完成,即可完成部署
+- 静静等待 pull 镜像完成,即可完成部署
+
 ## H3C 命令
 - [点此此处可以参考](https://www.h3c.com/cn/d_201907/1209848_30005_0.htm)
 - 图 1-2 配置 sFlow 组网图
 !()[https://resource.h3c.com/cn/201907/02/20190702_4353057_image002_1209848_30005_0.png]
+```
 3. 配置步骤
 (1)       配置 IP 地址
 
@@ -216,7 +221,9 @@ Interface      CID   Interval(s) FID   MaxHLen Rate     Mode      Status
 
 FGE1/0/1         1     120         1     128     4000     Random    Active
 
-从上面的显示信息中可以看到开启 sFlow 功能的 FortyGigE1/0/1 接口处于 “Active” 状态，Counter 采样的时间间隔为 120 秒，Flow 采样的报文采样率为 4000，即在 4000 个报文中抽取一个报文进行采样，表示 sFlow 功能正在正常运行。
+从上面的显示信息中可以看到开启 sFlow 功能的 FortyGigE1/0/1 接口处于 “Active” 状态，Counter 采样的时间间隔为 120 秒，Flow 采样的报文采样率为 4000，即在 4000 个报文中抽取一个
+报文进行采样，表示 sFlow 功能正在正常运行。
+```  
 ### 接口下取消监控命令
 ```
 undo  sflow flow collector 
