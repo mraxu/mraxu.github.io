@@ -2,7 +2,7 @@
 layout: post
 title:  chrome 默认新标签页打开
 description: "MacOS"
-modified: 20220526 10:20:21
+modified: 2022-05-26 10:20:21
 tags: [macOS]
 post_type: developer
 blogid: 202205262222
