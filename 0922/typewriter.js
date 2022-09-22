@@ -1,4 +1,4 @@
-var str = '阿xu(模仿麻麻喊你)，生日快乐。<br>又美了一年啦，<br>下一年继续美腻~';
+var str = 'Dear Jennifer，生日快乐。<br>又美了一年啦，<br>下一年继续美腻~<br>只许欢你的XUGJ留~';
 var i = 0;
 var j=0;
 var word = document.getElementById('word');
@@ -60,7 +60,7 @@ function leftTimer(year,month,day,hour,minute,second){
  minutes = checkTime(minutes); 
  seconds = checkTime(seconds); 
  // setInterval("leftTimer(2017,10,28,0,0,0)",1000); 
- timer.innerHTML = "年龄 19 --> 20&nbsp;:<br>(&nbsp;"+days+" days&nbsp;&nbsp;&nbsp;" + hours+" hours&nbsp;&nbsp;&nbsp;" + minutes+" minutes&nbsp;&nbsp;&nbsp;"+seconds+" seconds&nbsp;)"; 
+ timer.innerHTML = "仙女年龄永远18岁!&nbsp;:<br>(&nbsp;"+days+" days&nbsp;&nbsp;&nbsp;" + hours+" hours&nbsp;&nbsp;&nbsp;" + minutes+" minutes&nbsp;&nbsp;&nbsp;"+seconds+" seconds&nbsp;)"; 
 } 
 function checkTime(i){ //将0-9的数字前面加上0，例1变为01 
  if(i<10) 
