@@ -1,4 +1,4 @@
-var str = 'Dear Jennifer，生日快乐。<br>又美了一年啦，<br>下一年继续美腻~<br>只许欢你的XUGJ留~';
+var str = 'Dear Jennifer，生日快乐。<br>又美了一年啦，下一年继续美腻~<br>只许欢你的Axu留~';
 var i = 0;
 var j=0;
 var word = document.getElementById('word');
@@ -74,7 +74,7 @@ function checkTime(i){ //将0-9的数字前面加上0，例1变为01
 setTimeout(typing,1500);
 
 setTimeout(function () {
-    setInterval("leftTimer(2018,4,17,0,0,0)",1000);
+    setInterval("leftTimer(1998,9,11,0,0,0)",1000);
 },1500)
 
 //实现淡入效果
