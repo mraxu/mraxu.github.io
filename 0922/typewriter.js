@@ -74,7 +74,7 @@ function checkTime(i){ //将0-9的数字前面加上0，例1变为01
 setTimeout(typing,1500);
 
 setTimeout(function () {
-    setInterval("leftTimer(1998,9,11,0,0,0)",1000);
+    setInterval("leftTimer(1998,9,22,0,0,0)",1000);
 },1500)
 
 //实现淡入效果
